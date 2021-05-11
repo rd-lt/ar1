@@ -23,9 +23,12 @@
                     id="animated-asset"
                     src="assets/asset.glb"
                 ></a-asset-item>
+<<<<<<< HEAD
                 <a-asset-item>
                     <audio id="sound" src="audio.mp3" preload="auto"></audio>
                 </a-asset-item>
+=======
+>>>>>>> parent of b39099e (fsfdsfs)
             </a-assets>
 
             <a-marker
@@ -37,7 +40,6 @@
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
-                soundhandler
             >
                 <a-entity
                     id="bowser-model"
@@ -48,18 +50,8 @@
                     gesture-handler
                 ></a-entity>
             </a-marker>
-            <a-entity sound="src: #sound" autoplay="false"></a-entity>
+
             <a-entity camera></a-entity>
         </a-scene>
-        <script>
-            AFRAME.registerComponent('soundhandler', {
-             tick: function () {
-                    var entity = document.querySelector('[sound]');
-                  if (document.querySelector('a-marker').object3D.visible == true) {
-                     entity.components.sound.playSound();
-                 }
-              }
-            });
-            </script>
     </body>
 </html>
