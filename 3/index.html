@@ -46,7 +46,7 @@
                     gesture-handler
                 ></a-entity>
             </a-marker>
-            <a-entity sound="src: #sound" autoplay="false" geometry="primitive: plane" material="color: blue" position="-10 0 0" ></a-entity>
+            <a-entity sound="src: #sound" autoplay="false"></a-entity>
             <a-entity camera></a-entity>
         </a-scene>
         <script>
@@ -55,8 +55,7 @@
                     var entity = document.querySelector('[sound]');
                   if (document.querySelector('a-marker').object3D.visible == true) {
                      entity.components.sound.playSound();
-                 }else
-                     entity.components.sound.pauseSound();
+                 }
               }
             });
             </script>
